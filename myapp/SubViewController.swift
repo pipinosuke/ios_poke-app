@@ -14,7 +14,7 @@ class SubViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        tableView.register(UINib(nibName: "SubTableViewCell", bundle: nil), forCellReuseIdentifier: "SubTableViewCell")
         // Do any additional setup after loading the view.
     }
 
@@ -36,17 +36,23 @@ class SubViewController: UIViewController {
 
 }
 
-//extension SubViewController: UITableViewDelegate {
-//
-//}
-//
-//extension SubViewController: UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 1
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        <#code#>
-//    }
-//
-//}
+//MARK----------
+
+extension SubViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //処理
+    }
+}
+
+extension SubViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SubTableViewCell", for: indexPath) as! SubTableViewCell
+        cell.titleLabel.text = "あああ"
+        return cell
+    }
+
+}

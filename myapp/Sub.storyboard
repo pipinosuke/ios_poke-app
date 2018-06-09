@@ -21,6 +21,20 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2W2-5z-sEt">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SubTableViewCell" id="ubY-05-A40" customClass="SubTableViewCell" customModule="myapp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ubY-05-A40" id="HxY-Tp-0Em">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bMv-8n-lTw" id="ngH-p9-CcD"/>
+                                    <outlet property="delegate" destination="bMv-8n-lTw" id="BHu-tf-did"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -41,11 +55,11 @@
             </objects>
             <point key="canvasLocation" x="1192.8" y="141.67916041979012"/>
         </scene>
-        <!--Item-->
+        <!--Qiita-->
         <scene sceneID="DV1-fg-yAn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4yV-X0-Iqz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="gJF-or-DTI"/>
+                    <tabBarItem key="tabBarItem" title="Qiita" id="gJF-or-DTI"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7FF-Jt-7pY">

@@ -18,6 +18,8 @@
 		54360B1520CB95D0008BACD0 /* MainTabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54360B1420CB95D0008BACD0 /* MainTabBarController.storyboard */; };
 		54360B1720CB9884008BACD0 /* Sub.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54360B1620CB9884008BACD0 /* Sub.storyboard */; };
 		54360B1920CB989E008BACD0 /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54360B1820CB989E008BACD0 /* SubViewController.swift */; };
+		54360B1E20CB9E4C008BACD0 /* SubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54360B1C20CB9E4C008BACD0 /* SubTableViewCell.swift */; };
+		54360B1F20CB9E4C008BACD0 /* SubTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54360B1D20CB9E4C008BACD0 /* SubTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		54360B1420CB95D0008BACD0 /* MainTabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBarController.storyboard; sourceTree = "<group>"; };
 		54360B1620CB9884008BACD0 /* Sub.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sub.storyboard; sourceTree = "<group>"; };
 		54360B1820CB989E008BACD0 /* SubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
+		54360B1C20CB9E4C008BACD0 /* SubTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTableViewCell.swift; sourceTree = "<group>"; };
+		54360B1D20CB9E4C008BACD0 /* SubTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				54360B1420CB95D0008BACD0 /* MainTabBarController.storyboard */,
 				54360B1620CB9884008BACD0 /* Sub.storyboard */,
 				54360B1820CB989E008BACD0 /* SubViewController.swift */,
+				54360B1C20CB9E4C008BACD0 /* SubTableViewCell.swift */,
+				54360B1D20CB9E4C008BACD0 /* SubTableViewCell.xib */,
 			);
 			path = myapp;
 			sourceTree = "<group>";
@@ -241,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54360B1F20CB9E4C008BACD0 /* SubTableViewCell.xib in Resources */,
 				54360AEF20CB94AA008BACD0 /* LaunchScreen.storyboard in Resources */,
 				54360AEC20CB94AA008BACD0 /* Assets.xcassets in Resources */,
 				54360B1720CB9884008BACD0 /* Sub.storyboard in Resources */,
@@ -273,6 +280,7 @@
 				54360B1320CB94EE008BACD0 /* MainTabBarController.swift in Sources */,
 				54360AE720CB94A8008BACD0 /* HomeViewController.swift in Sources */,
 				54360AE520CB94A8008BACD0 /* AppDelegate.swift in Sources */,
+				54360B1E20CB9E4C008BACD0 /* SubTableViewCell.swift in Sources */,
 				54360B1920CB989E008BACD0 /* SubViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
