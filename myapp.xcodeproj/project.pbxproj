@@ -22,6 +22,11 @@
 		54360B1F20CB9E4C008BACD0 /* SubTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54360B1D20CB9E4C008BACD0 /* SubTableViewCell.xib */; };
 		54360B2220CBC40F008BACD0 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54360B2020CBC40F008BACD0 /* WebViewController.swift */; };
 		54360B2520CBC43E008BACD0 /* Web.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54360B2420CBC43E008BACD0 /* Web.storyboard */; };
+		5490400120CCE589001E70E7 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5490400020CCE589001E70E7 /* APIManager.swift */; };
+		5490400320CCE5C0001E70E7 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5490400220CCE5C0001E70E7 /* ArticleViewModel.swift */; };
+		5490400520CCE5CD001E70E7 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5490400420CCE5CD001E70E7 /* Article.swift */; };
+		5490400920CCE9E1001E70E7 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5490400720CCE9E1001E70E7 /* Result.framework */; };
+		5490400A20CCE9E1001E70E7 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5490400820CCE9E1001E70E7 /* APIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +68,11 @@
 		54360B1D20CB9E4C008BACD0 /* SubTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubTableViewCell.xib; sourceTree = "<group>"; };
 		54360B2020CBC40F008BACD0 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		54360B2420CBC43E008BACD0 /* Web.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Web.storyboard; sourceTree = "<group>"; };
+		5490400020CCE589001E70E7 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		5490400220CCE5C0001E70E7 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
+		5490400420CCE5CD001E70E7 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		5490400720CCE9E1001E70E7 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		5490400820CCE9E1001E70E7 /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5490400920CCE9E1001E70E7 /* Result.framework in Frameworks */,
+				5490400A20CCE9E1001E70E7 /* APIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +109,7 @@
 				54360AF820CB94AA008BACD0 /* myappTests */,
 				54360B0320CB94AA008BACD0 /* myappUITests */,
 				54360AE220CB94A8008BACD0 /* Products */,
+				5490400620CCE9E1001E70E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +126,9 @@
 		54360AE320CB94A8008BACD0 /* myapp */ = {
 			isa = PBXGroup;
 			children = (
+				54903FFF20CCE564001E70E7 /* Model */,
+				54903FFE20CCE557001E70E7 /* ViewModel */,
+				54903FFD20CCE54C001E70E7 /* Utils */,
 				54360AE420CB94A8008BACD0 /* AppDelegate.swift */,
 				54360AE620CB94A8008BACD0 /* HomeViewController.swift */,
 				54360AE820CB94A8008BACD0 /* Home.storyboard */,
@@ -149,6 +165,39 @@
 			path = myappUITests;
 			sourceTree = "<group>";
 		};
+		54903FFD20CCE54C001E70E7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5490400020CCE589001E70E7 /* APIManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		54903FFE20CCE557001E70E7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5490400220CCE5C0001E70E7 /* ArticleViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		54903FFF20CCE564001E70E7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5490400420CCE5CD001E70E7 /* Article.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5490400620CCE9E1001E70E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5490400820CCE9E1001E70E7 /* APIKit.framework */,
+				5490400720CCE9E1001E70E7 /* Result.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,6 +208,7 @@
 				54360ADD20CB94A8008BACD0 /* Sources */,
 				54360ADE20CB94A8008BACD0 /* Frameworks */,
 				54360ADF20CB94A8008BACD0 /* Resources */,
+				5490400B20CCEA12001E70E7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -279,17 +329,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5490400B20CCEA12001E70E7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		54360ADD20CB94A8008BACD0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				54360B2220CBC40F008BACD0 /* WebViewController.swift in Sources */,
+				5490400320CCE5C0001E70E7 /* ArticleViewModel.swift in Sources */,
+				5490400520CCE5CD001E70E7 /* Article.swift in Sources */,
 				54360B1320CB94EE008BACD0 /* MainTabBarController.swift in Sources */,
 				54360AE720CB94A8008BACD0 /* HomeViewController.swift in Sources */,
 				54360AE520CB94A8008BACD0 /* AppDelegate.swift in Sources */,
 				54360B1E20CB9E4C008BACD0 /* SubTableViewCell.swift in Sources */,
 				54360B1920CB989E008BACD0 /* SubViewController.swift in Sources */,
+				5490400120CCE589001E70E7 /* APIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +535,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EA3VP7SXZ2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = myapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -482,6 +557,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EA3VP7SXZ2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = myapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
