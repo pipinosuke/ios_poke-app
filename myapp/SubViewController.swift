@@ -40,7 +40,9 @@ class SubViewController: UIViewController {
 
 extension SubViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //処理
+        let storyboard = UIStoryboard(name: "Web", bundle: nil)
+        let vc: UIViewController = storyboard.instantiateInitialViewController()!
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
