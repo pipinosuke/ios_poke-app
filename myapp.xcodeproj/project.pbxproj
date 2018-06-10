@@ -27,6 +27,10 @@
 		5490400520CCE5CD001E70E7 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5490400420CCE5CD001E70E7 /* Article.swift */; };
 		5490400920CCE9E1001E70E7 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5490400720CCE9E1001E70E7 /* Result.framework */; };
 		5490400A20CCE9E1001E70E7 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5490400820CCE9E1001E70E7 /* APIKit.framework */; };
+		5490400D20CD08A5001E70E7 /* DecodableDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5490400C20CD08A5001E70E7 /* DecodableDataParser.swift */; };
+		5490400F20CD0984001E70E7 /* QiitaRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5490400E20CD0984001E70E7 /* QiitaRequest.swift */; };
+		5490401220CD14AA001E70E7 /* GetArticleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5490401120CD14AA001E70E7 /* GetArticleRequest.swift */; };
+		5490401420CD164C001E70E7 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5490401320CD164C001E70E7 /* BrightFutures.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,10 @@
 		5490400420CCE5CD001E70E7 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		5490400720CCE9E1001E70E7 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		5490400820CCE9E1001E70E7 /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
+		5490400C20CD08A5001E70E7 /* DecodableDataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableDataParser.swift; sourceTree = "<group>"; };
+		5490400E20CD0984001E70E7 /* QiitaRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaRequest.swift; sourceTree = "<group>"; };
+		5490401120CD14AA001E70E7 /* GetArticleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetArticleRequest.swift; sourceTree = "<group>"; };
+		5490401320CD164C001E70E7 /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BrightFutures.framework; path = Carthage/Build/iOS/BrightFutures.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5490401420CD164C001E70E7 /* BrightFutures.framework in Frameworks */,
 				5490400920CCE9E1001E70E7 /* Result.framework in Frameworks */,
 				5490400A20CCE9E1001E70E7 /* APIKit.framework in Frameworks */,
 			);
@@ -126,6 +135,7 @@
 		54360AE320CB94A8008BACD0 /* myapp */ = {
 			isa = PBXGroup;
 			children = (
+				5490401020CD0B0E001E70E7 /* Protocols */,
 				54903FFF20CCE564001E70E7 /* Model */,
 				54903FFE20CCE557001E70E7 /* ViewModel */,
 				54903FFD20CCE54C001E70E7 /* Utils */,
@@ -169,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				5490400020CCE589001E70E7 /* APIManager.swift */,
+				5490400C20CD08A5001E70E7 /* DecodableDataParser.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -192,10 +203,20 @@
 		5490400620CCE9E1001E70E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5490401320CD164C001E70E7 /* BrightFutures.framework */,
 				5490400820CCE9E1001E70E7 /* APIKit.framework */,
 				5490400720CCE9E1001E70E7 /* Result.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5490401020CD0B0E001E70E7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5490400E20CD0984001E70E7 /* QiitaRequest.swift */,
+				5490401120CD14AA001E70E7 /* GetArticleRequest.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +359,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/BrightFutures.framework",
 			);
 			outputPaths = (
 			);
@@ -353,13 +375,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				54360B2220CBC40F008BACD0 /* WebViewController.swift in Sources */,
+				5490400F20CD0984001E70E7 /* QiitaRequest.swift in Sources */,
 				5490400320CCE5C0001E70E7 /* ArticleViewModel.swift in Sources */,
 				5490400520CCE5CD001E70E7 /* Article.swift in Sources */,
 				54360B1320CB94EE008BACD0 /* MainTabBarController.swift in Sources */,
 				54360AE720CB94A8008BACD0 /* HomeViewController.swift in Sources */,
 				54360AE520CB94A8008BACD0 /* AppDelegate.swift in Sources */,
+				5490401220CD14AA001E70E7 /* GetArticleRequest.swift in Sources */,
 				54360B1E20CB9E4C008BACD0 /* SubTableViewCell.swift in Sources */,
 				54360B1920CB989E008BACD0 /* SubViewController.swift in Sources */,
+				5490400D20CD08A5001E70E7 /* DecodableDataParser.swift in Sources */,
 				5490400120CCE589001E70E7 /* APIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -544,7 +569,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = myapp.myapp;
+				PRODUCT_BUNDLE_IDENTIFIER = "sample-pipinosuke.myapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -566,7 +591,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = myapp.myapp;
+				PRODUCT_BUNDLE_IDENTIFIER = "sample-pipinosuke.myapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

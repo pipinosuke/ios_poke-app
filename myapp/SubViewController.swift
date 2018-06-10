@@ -7,21 +7,45 @@
 //
 
 import UIKit
+import APIKit
+import BrightFutures
 
 class SubViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    var viewModel = ArticleViewModel()
+    
+    var articles = [Article]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.register(UINib(nibName: "SubTableViewCell", bundle: nil), forCellReuseIdentifier: "SubTableViewCell")
-        // Do any additional setup after loading the view.
+        
+        load()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    private func load() {
+        let params = [
+            "page": 1,
+            ]
+        viewModel.fetchArticles(params: params)
+            .onSuccess { [weak self] data in
+                self?.articles = data.articles
+                self?.tableView.reloadData()
+            }
+            .onFailure { [weak self] error in
+                //self?.showErrorAlert(error.localizedDescription, completion: nil)
+        }
+                
+    }
+}
     
 
     /*
@@ -34,7 +58,7 @@ class SubViewController: UIViewController {
     }
     */
 
-}
+
 
 //MARK----------
 
@@ -48,12 +72,12 @@ extension SubViewController: UITableViewDelegate {
 
 extension SubViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return articles.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SubTableViewCell", for: indexPath) as! SubTableViewCell
-        cell.titleLabel.text = "あああ"
+        cell.titleLabel.text = articles[indexPath.row].title
         return cell
     }
 
