@@ -10,7 +10,9 @@ import UIKit
 
 class SubTableViewCell: UITableViewCell {
 
+    var article: Article?
     @IBOutlet weak var titleLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,4 +25,7 @@ class SubTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func bindData(article: Article) {
+        titleLabel.text = article.title
+    }
 }

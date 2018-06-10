@@ -65,7 +65,8 @@ class SubViewController: UIViewController {
 extension SubViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Web", bundle: nil)
-        let vc: UIViewController = storyboard.instantiateInitialViewController()!
+        let vc: WebViewController = storyboard.instantiateInitialViewController() as! WebViewController
+        vc.urlStr = articles[indexPath.row].url
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
@@ -77,7 +78,7 @@ extension SubViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SubTableViewCell", for: indexPath) as! SubTableViewCell
-        cell.titleLabel.text = articles[indexPath.row].title
+        cell.bindData(article: articles[indexPath.row])
         return cell
     }
 
