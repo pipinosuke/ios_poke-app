@@ -1,3 +1,4 @@
+github "SVGKit/SVGKit" "2.0.0"
 github "Thomvis/BrightFutures" "6.0.1"
 github "antitypical/Result" "3.2.4"
 github "ishkawa/APIKit" "3.2.1"

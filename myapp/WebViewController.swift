@@ -21,7 +21,7 @@ class WebViewController: UIViewController {
         guard let url = URL(string: urlStr!) else { return }
         let request = URLRequest(url: url)
         webView.load(request)
-        
+        print(webView.title)
         
 
         // Do any additional setup after loading the view.
