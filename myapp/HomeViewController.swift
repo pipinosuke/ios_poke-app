@@ -20,8 +20,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         collectionView.register(UINib(nibName: "PokemonCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PokemonCollectionViewCell")
-        collectionView.backgroundColor = UIColor.black
-        
+        collectionView.backgroundColor = .black
     }
 
     override func didReceiveMemoryWarning() {
