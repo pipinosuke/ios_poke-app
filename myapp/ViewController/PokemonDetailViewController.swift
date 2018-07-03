@@ -19,6 +19,7 @@ class PokemonDetailViewController: UIViewController {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "PokemonParamsTableViewCell", bundle: nil), forCellReuseIdentifier: "PokemonParamsTableViewCell")
         tableView.register(UINib(nibName: "PokemonBasicDataTableViewCell", bundle: nil), forCellReuseIdentifier: "PokemonBasicDataTableViewCell")
+        tableView.register(UINib(nibName: "PokemonSpeedTableViewCell", bundle: nil), forCellReuseIdentifier: "PokemonSpeedTableViewCell")
         // Do any additional setup after loading the view.
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.separatorStyle = .none
@@ -47,12 +48,12 @@ class PokemonDetailViewController: UIViewController {
 
 extension PokemonDetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 && indexPath.section == 0 {
+        if indexPath.section == 0 {
             let cell: PokemonBasicDataTableViewCell = tableView.dequeueReusableCell(withIdentifier: "PokemonBasicDataTableViewCell") as! PokemonBasicDataTableViewCell
             guard let pokemon = pokemon else {return cell}
             cell.setPokemon(pokemon: pokemon)
             return cell
-        } else  {
+        } else if indexPath.section == 1 {
             let cell: PokemonParamsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "PokemonParamsTableViewCell") as! PokemonParamsTableViewCell
             cell.paramLabel.text = getParamStr(rowNumber: indexPath.row)
             guard let pokemon = self.pokemon else {
@@ -79,13 +80,16 @@ extension PokemonDetailViewController: UITableViewDelegate, UITableViewDataSourc
             }
             return cell
             
+        } else {
+            let cell:PokemonSpeedTableViewCell = tableView.dequeueReusableCell(withIdentifier: "PokemonSpeedTableViewCell") as! PokemonSpeedTableViewCell
+            return cell
         }
         
     }
 
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -94,6 +98,8 @@ extension PokemonDetailViewController: UITableViewDelegate, UITableViewDataSourc
             return 1
         case 1:
             return 6
+        case 2:
+            return 1
         default:
             return 1
         }

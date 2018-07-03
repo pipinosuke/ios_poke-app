@@ -38,6 +38,8 @@
 		54C405D420E731E300E10236 /* PokemonParamsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54C405D220E731E300E10236 /* PokemonParamsTableViewCell.xib */; };
 		54C405D720E7592F00E10236 /* PokemonBasicDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C405D520E7592F00E10236 /* PokemonBasicDataTableViewCell.swift */; };
 		54C405D820E7592F00E10236 /* PokemonBasicDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54C405D620E7592F00E10236 /* PokemonBasicDataTableViewCell.xib */; };
+		54D7087820EBECB600C160DA /* PokemonSpeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D7087620EBECB600C160DA /* PokemonSpeedTableViewCell.swift */; };
+		54D7087920EBECB600C160DA /* PokemonSpeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D7087720EBECB600C160DA /* PokemonSpeedTableViewCell.xib */; };
 		54DAC17020E6844000CB95F4 /* PokemonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DAC16F20E6844000CB95F4 /* PokemonDetailViewController.swift */; };
 		54DAC17320E6846700CB95F4 /* PokemonDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54DAC17220E6846700CB95F4 /* PokemonDetail.storyboard */; };
 		54DAC17520E68A4200CB95F4 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DAC17420E68A4200CB95F4 /* Pokemon.swift */; };
@@ -100,6 +102,8 @@
 		54C405D220E731E300E10236 /* PokemonParamsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemonParamsTableViewCell.xib; sourceTree = "<group>"; };
 		54C405D520E7592F00E10236 /* PokemonBasicDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonBasicDataTableViewCell.swift; sourceTree = "<group>"; };
 		54C405D620E7592F00E10236 /* PokemonBasicDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemonBasicDataTableViewCell.xib; sourceTree = "<group>"; };
+		54D7087620EBECB600C160DA /* PokemonSpeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonSpeedTableViewCell.swift; sourceTree = "<group>"; };
+		54D7087720EBECB600C160DA /* PokemonSpeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemonSpeedTableViewCell.xib; sourceTree = "<group>"; };
 		54DAC16F20E6844000CB95F4 /* PokemonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailViewController.swift; sourceTree = "<group>"; };
 		54DAC17220E6846700CB95F4 /* PokemonDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PokemonDetail.storyboard; sourceTree = "<group>"; };
 		54DAC17420E68A4200CB95F4 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
@@ -275,6 +279,8 @@
 				54C405D220E731E300E10236 /* PokemonParamsTableViewCell.xib */,
 				54C405D520E7592F00E10236 /* PokemonBasicDataTableViewCell.swift */,
 				54C405D620E7592F00E10236 /* PokemonBasicDataTableViewCell.xib */,
+				54D7087620EBECB600C160DA /* PokemonSpeedTableViewCell.swift */,
+				54D7087720EBECB600C160DA /* PokemonSpeedTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -395,6 +401,7 @@
 				54360AEA20CB94A8008BACD0 /* Home.storyboard in Resources */,
 				54DAF8C820E67640000A3D22 /* PokemonCollectionViewCell.xib in Resources */,
 				54360B1520CB95D0008BACD0 /* MainTabBarController.storyboard in Resources */,
+				54D7087920EBECB600C160DA /* PokemonSpeedTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +460,7 @@
 				54360AE520CB94A8008BACD0 /* AppDelegate.swift in Sources */,
 				5490401220CD14AA001E70E7 /* GetArticleRequest.swift in Sources */,
 				54360B1E20CB9E4C008BACD0 /* SubTableViewCell.swift in Sources */,
+				54D7087820EBECB600C160DA /* PokemonSpeedTableViewCell.swift in Sources */,
 				54360B1920CB989E008BACD0 /* SubViewController.swift in Sources */,
 				54DAC17020E6844000CB95F4 /* PokemonDetailViewController.swift in Sources */,
 				5490400D20CD08A5001E70E7 /* DecodableDataParser.swift in Sources */,
