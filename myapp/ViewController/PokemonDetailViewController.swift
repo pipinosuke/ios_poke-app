@@ -48,43 +48,24 @@ class PokemonDetailViewController: UIViewController {
 
 extension PokemonDetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
+        switch indexPath.section {
+        case 0:
             let cell: PokemonBasicDataTableViewCell = tableView.dequeueReusableCell(withIdentifier: "PokemonBasicDataTableViewCell") as! PokemonBasicDataTableViewCell
-            guard let pokemon = pokemon else {return cell}
+            guard let pokemon = pokemon else { return cell }
             cell.setPokemon(pokemon: pokemon)
             return cell
-        } else if indexPath.section == 1 {
+        
+        case 1:
             let cell: PokemonParamsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "PokemonParamsTableViewCell") as! PokemonParamsTableViewCell
-            cell.paramLabel.text = getParamStr(rowNumber: indexPath.row)
-            guard let pokemon = self.pokemon else {
-                return cell
-            }
-                switch indexPath.row {
-                case 0:
-                    cell.setValue(params: pokemon.hp)
-                    
-                case 1:
-                    cell.setValue(params: pokemon.attack)
-                case 2:
-                    cell.setValue(params: pokemon.defense)
-                case 3:
-                    cell.setValue(params: pokemon.special_attack)
-                case 4:
-                    cell.setValue(params: pokemon.special_defense)
-                case 5:
-                    cell.setValue(params: pokemon.speed)
-                    
-                default:
-                    return cell
-                    
-            }
+            setParamsForRow(rowNumber: indexPath.row, cell: cell)
             return cell
-            
-        } else {
+        
+        case 2:
             let cell:PokemonSpeedTableViewCell = tableView.dequeueReusableCell(withIdentifier: "PokemonSpeedTableViewCell") as! PokemonSpeedTableViewCell
             return cell
+        default:
+            return tableView.dequeueReusableCell(withIdentifier: "PokemonSpeedTableViewCell") as! PokemonSpeedTableViewCell
         }
-        
     }
 
     
@@ -104,23 +85,36 @@ extension PokemonDetailViewController: UITableViewDelegate, UITableViewDataSourc
             return 1
         }
     }
-
-    private func getParamStr(rowNumber: Int) -> String {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    
+    }
+    
+    
+    private func setParamsForRow(rowNumber: Int, cell: PokemonParamsTableViewCell)  {
+        guard let pokemon = pokemon else { return }
         switch rowNumber  {
         case 0:
-            return "HP"
+            cell.setValue(params: pokemon.hp)
+            cell.paramLabel.text = "HP"
         case 1:
-            return "攻撃"
+            cell.setValue(params: pokemon.attack)
+            cell.paramLabel.text = "攻撃"
         case 2:
-            return "防御"
+            cell.setValue(params: pokemon.defense)
+            cell.paramLabel.text = "防御"
         case 3:
-            return "特攻"
+            cell.setValue(params: pokemon.special_attack)
+            cell.paramLabel.text = "特攻"
         case 4:
-            return "特御"
+            cell.setValue(params: pokemon.special_defense)
+            cell.paramLabel.text = "特御"
         case 5:
-            return "素早さ"
+            cell.setValue(params: pokemon.speed)
+            cell.paramLabel.text = "素早さ"
         default:
-            return ""
+            cell.paramLabel.text = ""
         }
     }
 
