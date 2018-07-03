@@ -20,9 +20,9 @@ struct Pokemon: Codable {
     var special_attack: Int = 0
     var special_defense: Int = 0
     var speed: Int = 0
-//    let highest_speed: Int
-//    let semi_highest_speed: Int
-//    let lowest_speed: Int
-//    let semi_lowest_speed: Int
-    
+    var normal_speed: Int = 0
+    var higheset_speed: Int = 0
+    var semi_highest_speed: Int = 0
+    var lowest_speed: Int = 0
+    var semi_lowest_speed: Int = 0
 }

@@ -62,6 +62,14 @@ extension PokemonDetailViewController: UITableViewDelegate, UITableViewDataSourc
         
         case 2:
             let cell:PokemonSpeedTableViewCell = tableView.dequeueReusableCell(withIdentifier: "PokemonSpeedTableViewCell") as! PokemonSpeedTableViewCell
+            if indexPath.row == 1 {
+                guard let pokemon = pokemon else { return cell }
+                cell.highestLabel.text = String(pokemon.higheset_speed)
+                cell.semiHiestLabel.text = String(pokemon.semi_highest_speed)
+                cell.normalLabel.text = String(pokemon.normal_speed)
+                cell.lowestLabel.text = String(pokemon.lowest_speed)
+                cell.semiLowestLabel.text = String(pokemon.semi_lowest_speed)
+            }
             return cell
         default:
             return tableView.dequeueReusableCell(withIdentifier: "PokemonSpeedTableViewCell") as! PokemonSpeedTableViewCell
@@ -80,7 +88,7 @@ extension PokemonDetailViewController: UITableViewDelegate, UITableViewDataSourc
         case 1:
             return 6
         case 2:
-            return 1
+            return 2
         default:
             return 1
         }
