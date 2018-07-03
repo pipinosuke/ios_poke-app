@@ -41,6 +41,10 @@ class PokemonBasicDataTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         nameLabel.adjustsFontSizeToFitWidth = true
+        nameLabel.textColor = .white
+        pokeImageView.layer.cornerRadius = 30
+        pokeImageView.layer.masksToBounds = true
+        self.backgroundColor = .black
         
     }
 

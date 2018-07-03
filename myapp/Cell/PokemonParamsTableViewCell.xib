@@ -25,28 +25,32 @@
                         <color key="progressTintColor" cocoaTouchSystemColor="darkTextColor"/>
                     </progressView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWc-Qt-dsF">
-                        <rect key="frame" x="20" y="36" width="48" height="24"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <rect key="frame" x="20" y="19" width="42" height="58"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kR6-4N-UuZ">
-                        <rect key="frame" x="345" y="37" width="42" height="21"/>
+                        <rect key="frame" x="345" y="8" width="42" height="79.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="kR6-4N-UuZ" secondAttribute="bottom" constant="8" id="2Vf-vj-Mcx"/>
                     <constraint firstItem="VWc-Qt-dsF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Clg-I2-oOJ"/>
                     <constraint firstItem="JXg-Iv-qWP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="59" id="DUj-qS-LLr"/>
                     <constraint firstItem="JXg-Iv-qWP" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ItC-oV-8fQ"/>
                     <constraint firstItem="kR6-4N-UuZ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="XN8-le-3m0"/>
                     <constraint firstAttribute="trailing" secondItem="JXg-Iv-qWP" secondAttribute="trailing" constant="59" id="ZUR-ub-Bns"/>
+                    <constraint firstItem="kR6-4N-UuZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Zjk-tL-RJf"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="VWc-Qt-dsF" secondAttribute="bottom" constant="8" id="iGV-WQ-5tJ"/>
                     <constraint firstAttribute="bottom" secondItem="JXg-Iv-qWP" secondAttribute="bottom" constant="8" id="nry-xz-xzo"/>
                     <constraint firstItem="VWc-Qt-dsF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="qFz-7Q-kGp"/>
                     <constraint firstAttribute="trailing" secondItem="kR6-4N-UuZ" secondAttribute="trailing" constant="8" id="rE6-eO-59E"/>
                     <constraint firstItem="JXg-Iv-qWP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="tQM-rp-f50"/>
+                    <constraint firstItem="VWc-Qt-dsF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="tYm-o2-jb2"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

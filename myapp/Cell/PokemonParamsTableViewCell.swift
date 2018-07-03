@@ -20,9 +20,9 @@ class PokemonParamsTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         progressView.progressViewStyle = UIProgressViewStyle.bar
-        progressView.frame.size.height = 20.0
-//        progressView.frame.origin.x =  16
-        
+        scoreLabel.textColor = .white
+        paramLabel.textColor = .white
+        self.backgroundColor = .black
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,18 +35,12 @@ class PokemonParamsTableViewCell: UITableViewCell {
  //       paramLabel.text = String(params)
         //progress = Float(CGFloat(params) / 130)
         scoreLabel.text = String(params)
-        let progress = Float(CGFloat(params) / 170)
+        let progress = Float(CGFloat(params) / 130)
+        
+        //progressView.progressTintColor = UIColor(red: CGFloat(progress), green: 0, blue: 0.6,alpha: 1)
+        progressView.progressTintColor = .blue
         progressView.setProgress(Float(progress), animated: true)
-        print(progressView.progress)
-        if progressView.progress >= 0.7 {
-            progressView.tintColor = UIColor.red
-        } else if progressView.progress < 0.4 {
-            progressView.tintColor = UIColor.yellow
-        } else {
-            progressView.tintColor = UIColor.blue
-        }
     }
-
 }
 
 

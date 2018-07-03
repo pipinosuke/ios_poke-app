@@ -14,7 +14,9 @@ class PokemonCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
+        pokeImageView.layer.cornerRadius = 30
+        pokeImageView.layer.masksToBounds = true
+        self.backgroundColor = .black
     }
     
     func bindData(number: Int) {

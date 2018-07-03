@@ -21,6 +21,8 @@ class PokemonDetailViewController: UIViewController {
         tableView.register(UINib(nibName: "PokemonBasicDataTableViewCell", bundle: nil), forCellReuseIdentifier: "PokemonBasicDataTableViewCell")
         // Do any additional setup after loading the view.
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = .black
     }
     
 
