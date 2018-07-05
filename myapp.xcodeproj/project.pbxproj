@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		540E3EDD20ECF87B00371E69 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540E3EDC20ECF87B00371E69 /* NibLoadable.swift */; };
 		540E3EDF20EDC5BD00371E69 /* GetAlolaNumRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540E3EDE20EDC5BD00371E69 /* GetAlolaNumRequest.swift */; };
+		540E3EE120EDE8F600371E69 /* SlideMenuControllerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 540E3EE020EDE8F600371E69 /* SlideMenuControllerSwift.framework */; };
 		54360AE520CB94A8008BACD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54360AE420CB94A8008BACD0 /* AppDelegate.swift */; };
 		54360AE720CB94A8008BACD0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54360AE620CB94A8008BACD0 /* HomeViewController.swift */; };
 		54360AEA20CB94A8008BACD0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54360AE820CB94A8008BACD0 /* Home.storyboard */; };
@@ -69,6 +70,7 @@
 /* Begin PBXFileReference section */
 		540E3EDC20ECF87B00371E69 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		540E3EDE20EDC5BD00371E69 /* GetAlolaNumRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAlolaNumRequest.swift; sourceTree = "<group>"; };
+		540E3EE020EDE8F600371E69 /* SlideMenuControllerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SlideMenuControllerSwift.framework; path = Carthage/Build/iOS/SlideMenuControllerSwift.framework; sourceTree = "<group>"; };
 		54360AE120CB94A8008BACD0 /* myapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54360AE420CB94A8008BACD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54360AE620CB94A8008BACD0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				540E3EE120EDE8F600371E69 /* SlideMenuControllerSwift.framework in Frameworks */,
 				5490401420CD164C001E70E7 /* BrightFutures.framework in Frameworks */,
 				5490400920CCE9E1001E70E7 /* Result.framework in Frameworks */,
 				5490400A20CCE9E1001E70E7 /* APIKit.framework in Frameworks */,
@@ -240,6 +243,7 @@
 		5490400620CCE9E1001E70E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				540E3EE020EDE8F600371E69 /* SlideMenuControllerSwift.framework */,
 				5490401320CD164C001E70E7 /* BrightFutures.framework */,
 				5490400820CCE9E1001E70E7 /* APIKit.framework */,
 				5490400720CCE9E1001E70E7 /* Result.framework */,
@@ -437,6 +441,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/BrightFutures.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SlideMenuControllerSwift.framework",
 			);
 			outputPaths = (
 			);

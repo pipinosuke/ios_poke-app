@@ -32,6 +32,7 @@ class PokemonBasicDataTableViewCell: UITableViewCell {
     ]
     
     
+    @IBOutlet weak var evoButton: UIButton!
     @IBOutlet weak var pokeImageView: UIImageView!
     @IBOutlet weak var type2ImageVIew: UIImageView!
     @IBOutlet weak var type1ImageView: UIImageView!

@@ -21,7 +21,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="325" height="115.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="n2" translatesAutoresizingMaskIntoConstraints="NO" id="vbf-8g-aKR">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="type0" translatesAutoresizingMaskIntoConstraints="NO" id="vbf-8g-aKR">
                         <rect key="frame" x="245" y="94.5" width="32" height="14"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="vbf-8g-aKR" secondAttribute="height" multiplier="16:7" id="Hof-AX-Txk"/>
@@ -41,7 +41,7 @@
                             <constraint firstAttribute="height" constant="100" id="u7j-Et-8pY"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="n1" translatesAutoresizingMaskIntoConstraints="NO" id="bei-5z-9eS">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="type4" translatesAutoresizingMaskIntoConstraints="NO" id="bei-5z-9eS">
                         <rect key="frame" x="285" y="94.5" width="32" height="14"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="bei-5z-9eS" secondAttribute="height" multiplier="16:7" id="F8f-v3-WwK"/>
@@ -75,7 +75,7 @@
     </objects>
     <resources>
         <image name="1" width="100" height="100"/>
-        <image name="n1" width="32" height="14"/>
-        <image name="n2" width="32" height="14"/>
+        <image name="type0" width="32" height="14"/>
+        <image name="type4" width="32" height="14"/>
     </resources>
 </document>

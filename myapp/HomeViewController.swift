@@ -18,12 +18,15 @@ class HomeViewController: UIViewController {
     var viewModel = PokeViewModel()
     var pokemons :[Pokemon]?
     
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         collectionView.register(UINib(nibName: "PokemonCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PokemonCollectionViewCell")
         collectionView.backgroundColor = .black
+        indicatorView.activityIndicatorViewStyle = .whiteLarge
+        indicatorView.hidesWhenStopped = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,6 +52,8 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.addSubview(indicatorView)
+        indicatorView.startAnimating()
         let storyboard: UIStoryboard = UIStoryboard(name: "PokemonDetail", bundle: nil)
         let vc: PokemonDetailViewController = storyboard.instantiateInitialViewController() as! PokemonDetailViewController
         
@@ -60,6 +65,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 .onFailure { [weak self] error in
                     //showErrorAlert(error.localizedDescription, completion: nil)
             }
+        indicatorView.stopAnimating()
     }
     
     private func setParams(indexPath: IndexPath) -> [String: Any] {
