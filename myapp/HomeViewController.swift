@@ -21,13 +21,17 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var indicatorView: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         collectionView.register(UINib(nibName: "PokemonCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PokemonCollectionViewCell")
         collectionView.backgroundColor = .black
+        
         indicatorView.activityIndicatorViewStyle = .whiteLarge
         indicatorView.hidesWhenStopped = true
+        
+        addLeftBarButtonWithImage(UIImage(named: "1")!)
     }
 
     override func didReceiveMemoryWarning() {

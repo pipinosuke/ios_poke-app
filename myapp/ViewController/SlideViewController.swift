@@ -9,7 +9,19 @@
 import UIKit
 import SlideMenuControllerSwift
 
-class SlideMenuViewController: UIViewController  {
+class SlideViewController: SlideMenuController {
+    
+    override func awakeFromNib() {
+        let mainstoryboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+        let mainVC:  UINavigationController =  mainstoryboard.instantiateInitialViewController() as! UINavigationController
+        let leftstoryboard: UIStoryboard = UIStoryboard(name: "Left", bundle: nil)
+        let leftVC: LeftViewController = leftstoryboard.instantiateViewController(withIdentifier: "Left") as! LeftViewController
+        
+        mainViewController = mainVC
+        leftViewController = leftVC
+        
+        super.awakeFromNib()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,16 +34,6 @@ class SlideMenuViewController: UIViewController  {
         // Dispose of any resources that can be recreated.
     }
     
-}
-
-extension SlideMenuViewController: SlideMenuControllerDelegate {
-    override func awakeFromNib() {
-        let mainVC = storyboard?.instantiateViewController(withIdentifier: "Home")
-        let leftVC = storyboard?.instantiateViewController(withIdentifier: "Left")
-        self.slideMenuController()?.mainViewController      = mainVC
-        self.slideMenuController()?.leftViewController = leftVC
-        super.awakeFromNib()
-    }
 }
 
     

@@ -17,7 +17,7 @@ class MainTabBarController: UITabBarController {
         tabBar.barTintColor = .black
 
         // Do any additional setup after loading the view.
-        let names = ["Home", "Sub"]
+        let names = ["Slide", "Sub"]
         
         var viewControllers = [UIViewController]()
         for name in names {
