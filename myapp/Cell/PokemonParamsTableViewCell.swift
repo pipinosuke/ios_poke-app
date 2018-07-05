@@ -14,7 +14,6 @@ class PokemonParamsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var paramLabel: UILabel!
-    //    var progress: Float = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,12 +31,9 @@ class PokemonParamsTableViewCell: UITableViewCell {
     }
     
     func setValue(params: Int) {
- //       paramLabel.text = String(params)
-        //progress = Float(CGFloat(params) / 130)
         scoreLabel.text = String(params)
         let progress = Float(CGFloat(params) / 130)
         
-        //progressView.progressTintColor = UIColor(red: CGFloat(progress), green: 0, blue: 0.6,alpha: 1)
         progressView.progressTintColor = .blue
         progressView.setProgress(Float(progress), animated: true)
     }

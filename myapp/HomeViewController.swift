@@ -13,7 +13,10 @@ import BrightFutures
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var segmentControl: UISegmentedControl!
+    
     var viewModel = PokeViewModel()
+    var pokemons :[Pokemon]?
     
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
@@ -27,19 +30,29 @@ class HomeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    
-
+    @IBAction func tappedToggleControl(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 1 {
+            let params = [
+                "type": "alola"
+            ]
+            viewModel.fetchAlolaNumber(params: params)
+                .onSuccess { [weak self] data in
+                    self?.pokemons = data
+                    self?.collectionView.reloadData()
+            }
+                .onFailure { [weak self] error in
+                   //viewModel.showErrorAlert(error.localizedDescription, completion: nil)
+            }
+        }
+    }
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard: UIStoryboard = UIStoryboard(name: "PokemonDetail", bundle: nil)
         let vc: PokemonDetailViewController = storyboard.instantiateInitialViewController() as! PokemonDetailViewController
-        let params = [
-                "id": indexPath.item + 1,
-                ]
-            viewModel.fetchPoke(params: params)
+        
+        viewModel.fetchPoke(params: setParams(indexPath: indexPath))
                 .onSuccess { [weak self] data in
                     vc.pokemon = data
                     self?.navigationController?.pushViewController(vc, animated: true)
@@ -49,8 +62,23 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             }
     }
     
+    private func setParams(indexPath: IndexPath) -> [String: Any] {
+        //綺麗にしたい
+        if segmentControl.selectedSegmentIndex == 0 {
+            return [ "id": indexPath.item + 1]
+        } else {
+            guard let pokemons = pokemons else { return ["":""] }
+                return [ "id": pokemons[indexPath.item].id ]
+            
+        }
+    }
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 804
+        if segmentControl.selectedSegmentIndex == 0{
+            return 804
+        } else {
+            return pokemons?.count ?? 0
+        }
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -59,7 +87,14 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: PokemonCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "PokemonCollectionViewCell", for: indexPath) as! PokemonCollectionViewCell
-        cell.bindData(number: indexPath.item + 1)
+        
+        if segmentControl.selectedSegmentIndex == 0 {
+            cell.bindData(number: indexPath.item + 1)
+        } else {
+            guard let pokemons = pokemons else { return cell }
+            cell.bindData(number: pokemons[indexPath.item].id)
+        }
+        
         return cell
     }
 }

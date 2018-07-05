@@ -17,19 +17,24 @@ class PokemonDetailViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: "PokemonParamsTableViewCell", bundle: nil), forCellReuseIdentifier: "PokemonParamsTableViewCell")
-        tableView.register(UINib(nibName: "PokemonBasicDataTableViewCell", bundle: nil), forCellReuseIdentifier: "PokemonBasicDataTableViewCell")
-        tableView.register(UINib(nibName: "PokemonSpeedTableViewCell", bundle: nil), forCellReuseIdentifier: "PokemonSpeedTableViewCell")
         // Do any additional setup after loading the view.
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.separatorStyle = .none
         tableView.backgroundColor = .black
+        
+        registerCells()
     }
     
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    private func registerCells() {
+        tableView.register(UINib(nibName: "PokemonParamsTableViewCell", bundle: nil), forCellReuseIdentifier: "PokemonParamsTableViewCell")
+        tableView.register(UINib(nibName: "PokemonBasicDataTableViewCell", bundle: nil), forCellReuseIdentifier: "PokemonBasicDataTableViewCell")
+        tableView.register(UINib(nibName: "PokemonSpeedTableViewCell", bundle: nil), forCellReuseIdentifier: "PokemonSpeedTableViewCell")
     }
 }
     
@@ -71,11 +76,11 @@ extension PokemonDetailViewController: UITableViewDelegate, UITableViewDataSourc
                 cell.semiLowestLabel.text = String(pokemon.semi_lowest_speed)
             }
             return cell
+
         default:
             return tableView.dequeueReusableCell(withIdentifier: "PokemonSpeedTableViewCell") as! PokemonSpeedTableViewCell
         }
     }
-
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
@@ -96,9 +101,7 @@ extension PokemonDetailViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-    
     }
-    
     
     private func setParamsForRow(rowNumber: Int, cell: PokemonParamsTableViewCell)  {
         guard let pokemon = pokemon else { return }

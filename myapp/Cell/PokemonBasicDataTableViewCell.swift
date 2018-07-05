@@ -45,7 +45,6 @@ class PokemonBasicDataTableViewCell: UITableViewCell {
         pokeImageView.layer.cornerRadius = 30
         pokeImageView.layer.masksToBounds = true
         self.backgroundColor = .black
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -54,14 +53,9 @@ class PokemonBasicDataTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setParams(number: Int){
-        pokeImageView.image = UIImage(named: String(number))
-    }
-    
     func setPokemon(pokemon: Pokemon) {
         pokeImageView.image = UIImage(named: String(pokemon.id))
         nameLabel.text = pokemon.name
-        
         if let type1ImageName = typeNums[pokemon.type1]  {
             type1ImageView.image = UIImage(named: "type" + type1ImageName)
         }
@@ -69,8 +63,6 @@ class PokemonBasicDataTableViewCell: UITableViewCell {
             type2ImageVIew.image = UIImage(named: "type" + type2ImageName)
         } else {
             type2ImageVIew.isHidden = true
-            return
         }
-        
     }
 }

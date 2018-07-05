@@ -52,10 +52,24 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="V4m-Jz-8xX"/>
+                    <navigationItem key="navigationItem" id="V4m-Jz-8xX">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="pk1-Zi-cRT">
+                            <rect key="frame" x="8" y="7" width="359" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="全国"/>
+                                <segment title="アローラ"/>
+                            </segments>
+                            <connections>
+                                <action selector="tappedToggleControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="21I-LP-Rvs"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="XZq-YS-DwR" id="5PV-mf-HJK"/>
+                        <outlet property="segmentControl" destination="pk1-Zi-cRT" id="fJb-Wz-JLh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

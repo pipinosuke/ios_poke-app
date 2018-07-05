@@ -14,4 +14,7 @@ class PokeViewModel {
     func fetchPoke(params: [String: Any]) -> Future<GetPokeRequest.Response, SessionTaskError > {
         return APIManager.send(request: GetPokeRequest(queryParameters: params))
     }
+    func fetchAlolaNumber(params: [String: Any]) -> Future<GetAlolaNumRequest.Response, SessionTaskError > {
+        return APIManager.send(request: GetAlolaNumRequest(queryParameters: params))
+    }
 }

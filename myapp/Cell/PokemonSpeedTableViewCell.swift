@@ -15,6 +15,7 @@ class PokemonSpeedTableViewCell: UITableViewCell {
     @IBOutlet weak var highestLabel: UILabel!
     @IBOutlet weak var semiHiestLabel: UILabel!
     @IBOutlet weak var normalLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -31,5 +32,4 @@ class PokemonSpeedTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }
