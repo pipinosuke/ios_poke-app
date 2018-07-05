@@ -5,7 +5,6 @@
 //  Created by pipinosuke on 2018/06/09.
 //  Copyright © 2018年 pipinosuke. All rights reserved.
 //
-
 import UIKit
 
 @UIApplicationMain
@@ -16,6 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+//        let slideMenuController = SlideMenuViewController(nibName: HomeViewController, bundle: LeftViewController)
+//        self.window?.rootViewController = slideMenuController
+//        self.window?.makeKeyAndVisible()
+//        
         return true
     }
 

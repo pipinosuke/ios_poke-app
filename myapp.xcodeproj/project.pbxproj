@@ -10,6 +10,10 @@
 		540E3EDD20ECF87B00371E69 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540E3EDC20ECF87B00371E69 /* NibLoadable.swift */; };
 		540E3EDF20EDC5BD00371E69 /* GetAlolaNumRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540E3EDE20EDC5BD00371E69 /* GetAlolaNumRequest.swift */; };
 		540E3EE120EDE8F600371E69 /* SlideMenuControllerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 540E3EE020EDE8F600371E69 /* SlideMenuControllerSwift.framework */; };
+		540E3EE320EDEA6F00371E69 /* SlideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 540E3EE220EDEA6F00371E69 /* SlideMenu.storyboard */; };
+		540E3EE520EDEA8900371E69 /* SlideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540E3EE420EDEA8900371E69 /* SlideMenuViewController.swift */; };
+		540E3EE820EDEE6100371E69 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540E3EE620EDEE6100371E69 /* LeftViewController.swift */; };
+		540E3EEB20EDEE8000371E69 /* Left.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 540E3EEA20EDEE8000371E69 /* Left.storyboard */; };
 		54360AE520CB94A8008BACD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54360AE420CB94A8008BACD0 /* AppDelegate.swift */; };
 		54360AE720CB94A8008BACD0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54360AE620CB94A8008BACD0 /* HomeViewController.swift */; };
 		54360AEA20CB94A8008BACD0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54360AE820CB94A8008BACD0 /* Home.storyboard */; };
@@ -71,6 +75,10 @@
 		540E3EDC20ECF87B00371E69 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		540E3EDE20EDC5BD00371E69 /* GetAlolaNumRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAlolaNumRequest.swift; sourceTree = "<group>"; };
 		540E3EE020EDE8F600371E69 /* SlideMenuControllerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SlideMenuControllerSwift.framework; path = Carthage/Build/iOS/SlideMenuControllerSwift.framework; sourceTree = "<group>"; };
+		540E3EE220EDEA6F00371E69 /* SlideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SlideMenu.storyboard; sourceTree = "<group>"; };
+		540E3EE420EDEA8900371E69 /* SlideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenuViewController.swift; sourceTree = "<group>"; };
+		540E3EE620EDEE6100371E69 /* LeftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		540E3EEA20EDEE8000371E69 /* Left.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Left.storyboard; sourceTree = "<group>"; };
 		54360AE120CB94A8008BACD0 /* myapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54360AE420CB94A8008BACD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54360AE620CB94A8008BACD0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -267,7 +275,9 @@
 		54DAC16E20E6841D00CB95F4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				540E3EE620EDEE6100371E69 /* LeftViewController.swift */,
 				54DAC16F20E6844000CB95F4 /* PokemonDetailViewController.swift */,
+				540E3EE420EDEA8900371E69 /* SlideMenuViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -276,6 +286,8 @@
 			isa = PBXGroup;
 			children = (
 				54DAC17220E6846700CB95F4 /* PokemonDetail.storyboard */,
+				540E3EE220EDEA6F00371E69 /* SlideMenu.storyboard */,
+				540E3EEA20EDEE8000371E69 /* Left.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -401,8 +413,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				54360B1F20CB9E4C008BACD0 /* SubTableViewCell.xib in Resources */,
+				540E3EEB20EDEE8000371E69 /* Left.storyboard in Resources */,
 				54C405D420E731E300E10236 /* PokemonParamsTableViewCell.xib in Resources */,
 				54360AEF20CB94AA008BACD0 /* LaunchScreen.storyboard in Resources */,
+				540E3EE320EDEA6F00371E69 /* SlideMenu.storyboard in Resources */,
 				54360AEC20CB94AA008BACD0 /* Assets.xcassets in Resources */,
 				54360B1720CB9884008BACD0 /* Sub.storyboard in Resources */,
 				54C405D820E7592F00E10236 /* PokemonBasicDataTableViewCell.xib in Resources */,
@@ -469,10 +483,12 @@
 				54DAC17520E68A4200CB95F4 /* Pokemon.swift in Sources */,
 				545292AA20E9F1E300F0714A /* PokeViewModel.swift in Sources */,
 				54C405D320E731E300E10236 /* PokemonParamsTableViewCell.swift in Sources */,
+				540E3EE520EDEA8900371E69 /* SlideMenuViewController.swift in Sources */,
 				54360AE720CB94A8008BACD0 /* HomeViewController.swift in Sources */,
 				54360AE520CB94A8008BACD0 /* AppDelegate.swift in Sources */,
 				5490401220CD14AA001E70E7 /* GetArticleRequest.swift in Sources */,
 				54360B1E20CB9E4C008BACD0 /* SubTableViewCell.swift in Sources */,
+				540E3EE820EDEE6100371E69 /* LeftViewController.swift in Sources */,
 				54D7087820EBECB600C160DA /* PokemonSpeedTableViewCell.swift in Sources */,
 				54360B1920CB989E008BACD0 /* SubViewController.swift in Sources */,
 				54DAC17020E6844000CB95F4 /* PokemonDetailViewController.swift in Sources */,

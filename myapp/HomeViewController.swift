@@ -9,6 +9,7 @@
 import UIKit
 import APIKit
 import BrightFutures
+import SlideMenuControllerSwift
 
 
 class HomeViewController: UIViewController {
