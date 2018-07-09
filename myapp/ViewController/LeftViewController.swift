@@ -11,12 +11,16 @@ import SlideMenuControllerSwift
 
 class LeftViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.view.backgroundColor = .black
 
         // Do any additional setup after loading the view.
+        tableView.register(UINib(nibName: "LeftMenuTypeImageTableViewCell", bundle: nil), forCellReuseIdentifier: "LeftMenuTypeImageTableViewCell")
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.backgroundColor = .black
+        tableView.separatorStyle = .none
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,4 +39,27 @@ class LeftViewController: UIViewController {
     }
     */
 
+}
+
+extension LeftViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: LeftMenuTypeImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "LeftMenuTypeImageTableViewCell", for: indexPath) as! LeftMenuTypeImageTableViewCell
+        cell.typeImageView.image = UIImage(named: "type" + String(indexPath.row))
+        return cell
+        
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 17
+    }
+    
 }

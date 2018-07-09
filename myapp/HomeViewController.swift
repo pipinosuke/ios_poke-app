@@ -31,7 +31,7 @@ class HomeViewController: UIViewController {
         indicatorView.activityIndicatorViewStyle = .whiteLarge
         indicatorView.hidesWhenStopped = true
         
-        addLeftBarButtonWithImage(UIImage(named: "1")!)
+        addLeftBarButtonWithImage(UIImage(named: "search_icon")!)
     }
 
     override func didReceiveMemoryWarning() {
