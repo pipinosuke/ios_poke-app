@@ -16,6 +16,8 @@
 		540E3EEB20EDEE8000371E69 /* Left.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 540E3EEA20EDEE8000371E69 /* Left.storyboard */; };
 		540E3EEE20EDFC7000371E69 /* LeftMenuTypeImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540E3EEC20EDFC7000371E69 /* LeftMenuTypeImageTableViewCell.swift */; };
 		540E3EEF20EDFC7000371E69 /* LeftMenuTypeImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 540E3EED20EDFC7000371E69 /* LeftMenuTypeImageTableViewCell.xib */; };
+		5415FEAA20F356A0003BEE38 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5415FEA820F3569F003BEE38 /* Charts.framework */; };
+		5415FEAB20F356A0003BEE38 /* Ji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5415FEA920F356A0003BEE38 /* Ji.framework */; };
 		54360AE520CB94A8008BACD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54360AE420CB94A8008BACD0 /* AppDelegate.swift */; };
 		54360AE720CB94A8008BACD0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54360AE620CB94A8008BACD0 /* HomeViewController.swift */; };
 		54360AEA20CB94A8008BACD0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54360AE820CB94A8008BACD0 /* Home.storyboard */; };
@@ -83,6 +85,8 @@
 		540E3EEA20EDEE8000371E69 /* Left.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Left.storyboard; sourceTree = "<group>"; };
 		540E3EEC20EDFC7000371E69 /* LeftMenuTypeImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuTypeImageTableViewCell.swift; sourceTree = "<group>"; };
 		540E3EED20EDFC7000371E69 /* LeftMenuTypeImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftMenuTypeImageTableViewCell.xib; sourceTree = "<group>"; };
+		5415FEA820F3569F003BEE38 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Carthage/Build/iOS/Charts.framework; sourceTree = "<group>"; };
+		5415FEA920F356A0003BEE38 /* Ji.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ji.framework; path = Carthage/Build/iOS/Ji.framework; sourceTree = "<group>"; };
 		54360AE120CB94A8008BACD0 /* myapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54360AE420CB94A8008BACD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54360AE620CB94A8008BACD0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5415FEAA20F356A0003BEE38 /* Charts.framework in Frameworks */,
+				5415FEAB20F356A0003BEE38 /* Ji.framework in Frameworks */,
 				540E3EE120EDE8F600371E69 /* SlideMenuControllerSwift.framework in Frameworks */,
 				5490401420CD164C001E70E7 /* BrightFutures.framework in Frameworks */,
 				5490400920CCE9E1001E70E7 /* Result.framework in Frameworks */,
@@ -255,6 +261,8 @@
 		5490400620CCE9E1001E70E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5415FEA820F3569F003BEE38 /* Charts.framework */,
+				5415FEA920F356A0003BEE38 /* Ji.framework */,
 				540E3EE020EDE8F600371E69 /* SlideMenuControllerSwift.framework */,
 				5490401320CD164C001E70E7 /* BrightFutures.framework */,
 				5490400820CCE9E1001E70E7 /* APIKit.framework */,
@@ -463,6 +471,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/BrightFutures.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SlideMenuControllerSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Ji.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Charts.framework",
 			);
 			outputPaths = (
 			);

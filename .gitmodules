@@ -1,0 +1,21 @@
+[submodule "Carthage/Checkouts/BrightFutures"]
+	path = Carthage/Checkouts/BrightFutures
+	url = https://github.com/Thomvis/BrightFutures.git
+[submodule "Carthage/Checkouts/Charts"]
+	path = Carthage/Checkouts/Charts
+	url = https://github.com/danielgindi/Charts.git
+[submodule "Carthage/Checkouts/Ji"]
+	path = Carthage/Checkouts/Ji
+	url = https://github.com/honghaoz/Ji.git
+[submodule "Carthage/Checkouts/SlideMenuControllerSwift"]
+	path = Carthage/Checkouts/SlideMenuControllerSwift
+	url = https://github.com/dekatotoro/SlideMenuControllerSwift.git
+[submodule "Carthage/Checkouts/APIKit"]
+	path = Carthage/Checkouts/APIKit
+	url = https://github.com/ishkawa/APIKit.git
+[submodule "Carthage/Checkouts/SVGKit"]
+	path = Carthage/Checkouts/SVGKit
+	url = https://github.com/SVGKit/SVGKit.git
+[submodule "Carthage/Checkouts/Result"]
+	path = Carthage/Checkouts/Result
+	url = https://github.com/antitypical/Result.git
